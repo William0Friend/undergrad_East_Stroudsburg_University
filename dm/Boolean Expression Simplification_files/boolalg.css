@@ -1,0 +1,17 @@
+span.invert { text-decoration: overline; 
+	    padding-left: 1pt; padding-right: 1pt; }
+tr.tabtit td { text-align: center; font-style: italic; }
+tr.ctr  { text-align: center; }
+td.tdr { text-align: center; padding-left: 6pt; padding-right: 6pt; }
+tr.exspr td { text-align: center; padding-left: 6pt; padding-right: 6pt; 
+	 vertical-align: top; }
+table.htabs { padding-left: 10px; padding-bottom: 10px; }
+table.htabs td.ht { padding-left: 10px; padding-right: 10px; }
+td.caption { text-align: center; font-family: sans; font-size: 90%; }
+td.mid { border-right: 1pt solid black; border-left: 1pt solid black; }
+td.second { border-left: 1pt solid black; }
+td.exhdr { text-decoration: underline; text-align: left; }
+td.step, td.just { text-align: left; vertical-align: baseline; }
+td.step { padding-right: 20pt; white-space: nowrap; }
+td.problist { text-align: left; }
+table.simex { margin: 10pt; }

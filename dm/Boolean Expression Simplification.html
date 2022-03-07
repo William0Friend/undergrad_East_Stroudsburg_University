@@ -1,0 +1,121 @@
+
+<!-- saved from url=(0055)http://sandbox.mc.edu/~bennet/cs110/boolalg/simple.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 <link rel="stylesheet" href="./Boolean Expression Simplification_files/twb.css" type="text/css">
+<link rel="stylesheet" href="./Boolean Expression Simplification_files/gencon.css" type="text/css">
+<link rel="stylesheet" href="./Boolean Expression Simplification_files/boolalg.css" type="text/css">
+<link rel="stylesheet" href="./Boolean Expression Simplification_files/dxtop.css" type="text/css">
+
+	 
+	 	 
+	 <title>Boolean Expression Simplification</title>
+	 
+	 	 </head>
+	 <body>
+	 <img class="tibar" src="./Boolean Expression Simplification_files/bibart.gif" alt="------------------------------------------------------------------------------"><br>
+	 <a href="http://www.mc.edu/"><img src="./Boolean Expression Simplification_files/msplash3.gif" class="nb right" alt="MC logo"></a>
+	 <div class="intit">Boolean Expression Simplification</div>
+	 <div class="uplnk"><a href="http://sandbox.mc.edu/~bennet/cs110/boolalg/index.html"><img src="./Boolean Expression Simplification_files/up3.gif" class="nb upimg" alt="[^]"></a>
+		<a href="http://sandbox.mc.edu/~bennet/cs110/boolalg/index.html">Boolean Algebra Examples</a> &nbsp; <a href="http://sandbox.mc.edu/~bennet/cs110/index.html"><img src="./Boolean Expression Simplification_files/up3.gif" class="nb upimg" style="width: 10px; height: 20px" alt="[^^]"><img src="./Boolean Expression Simplification_files/up3.gif" class="nb upimg" style="width: 10px; height: 20px" "="" alt="[^^]"></a>
+    <a href="http://sandbox.mc.edu/~bennet/cs110/index.html">Binary/Boolean Main Index</a></div>
+	 <img class="tibar tibarbot" src="./Boolean Expression Simplification_files/bibar.gif" alt="------------------------------------------------------------------------------"><div class="dxtop">
+<span class="dxname">[<a class="dxtop" href="http://sandbox.mc.edu/~bennet/cs110/boolalg/truthtab.html">Truth Table Examples</a>]</span> <span class="dxname">[<a class="dxtop" href="http://sandbox.mc.edu/~bennet/cs110/boolalg/simple.html">Boolean Expression Simplification</a>]</span> <span class="dxname">[<a class="dxtop" href="http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html">Logic Gate Examples</a>]</span> </div>
+
+
+
+Here are some examples of Boolean algebra simplifications.
+Each line gives a form of the expression, and the 
+rule or rules
+used to derive it from the previous one.
+Generally, there are several ways to reach the result.
+<a href="http://sandbox.mc.edu/~bennet/cs110/boolalg/rules.html">Here is the list of simplification rules</a>.
+<ul class="std">
+<li> Simplify: C + <span class="invert">BC</span>:<table class="simex">
+     <tbody><tr><td class="exhdr">Expression</td>
+         <td class="exhdr">Rule(s) Used</td></tr>
+     <tr><td class="step">C + <span class="invert">BC</span></td>
+         <td class="just">Original Expression</td></tr><tr><td class="step">
+</td></tr><tr><td class="step"> C + (<span class="invert">B</span> + <span class="invert">C</span>)
+</td><td class="just"> DeMorgan's Law.
+</td></tr><tr><td class="step"> (C + <span class="invert">C</span>) + <span class="invert">B</span>
+</td><td class="just"> Commutative, Associative Laws.
+</td></tr><tr><td class="step"> <i>T</i> + <span class="invert">B</span>
+</td><td class="just"> Complement Law.
+</td></tr><tr><td class="step"> <i>T</i>
+</td><td class="just"> Identity Law.
+</td></tr></tbody></table>
+</li><li> Simplify: <span class="invert">AB</span>(<span class="invert">A</span> + B)(<span class="invert">B</span> + B):<table class="simex">
+     <tbody><tr><td class="exhdr">Expression</td>
+         <td class="exhdr">Rule(s) Used</td></tr>
+     <tr><td class="step"><span class="invert">AB</span>(<span class="invert">A</span> + B)(<span class="invert">B</span> + B)</td>
+         <td class="just">Original Expression</td></tr><tr><td class="step">
+</td></tr><tr><td class="step"> <span class="invert">AB</span>(<span class="invert">A</span> + B)
+</td><td class="just"> Complement law, Identity law.
+</td></tr><tr><td class="step"> (<span class="invert">A</span> + <span class="invert">B</span>)(<span class="invert">A</span> + B)
+</td><td class="just"> DeMorgan's Law
+</td></tr><tr><td class="step"> <span class="invert">A</span> + <span class="invert">B</span>B
+</td><td class="just"> Distributive law.  This step uses the fact that or distributes over
+and.  It can look a bit strange 
+since addition does not distribute
+over multiplication.  
+</td></tr><tr><td class="step"> <span class="invert">A</span>
+</td><td class="just"> Complement, Identity.
+</td></tr></tbody></table>
+</li><li> Simplify: (A + C)(AD + A<span class="invert">D</span>) + AC + C:<table class="simex">
+     <tbody><tr><td class="exhdr">Expression</td>
+         <td class="exhdr">Rule(s) Used</td></tr>
+     <tr><td class="step">(A + C)(AD + A<span class="invert">D</span>) + AC + C</td>
+         <td class="just">Original Expression</td></tr><tr><td class="step">
+</td></tr><tr><td class="step"> (A + C)A(D + <span class="invert">D</span>) + AC + C
+</td><td class="just"> Distributive.
+</td></tr><tr><td class="step"> (A + C)A + AC + C
+</td><td class="just"> Complement, Identity.
+</td></tr><tr><td class="step"> A((A + C) + C) + C
+</td><td class="just"> Commutative, Distributive.
+</td></tr><tr><td class="step"> A(A + C) + C
+</td><td class="just"> Associative, Idempotent.
+</td></tr><tr><td class="step"> AA + AC + C
+</td><td class="just"> Distributive.
+</td></tr><tr><td class="step"> A + (A + <i>T</i>)C
+</td><td class="just"> Idempotent, Identity, Distributive.
+</td></tr><tr><td class="step"> A + C
+</td><td class="just"> Identity, twice.
+</td></tr></tbody></table>
+<div style="margin-top: 0pt; margin-bottom: 10pt; padding-top: 0pt;">
+You can also use distribution of or over and starting from
+A(A+C)+C to reach the same result by another route.</div>
+</li><li> Simplify: <span class="invert">A</span>(A + B) + (B + AA)(A + <span class="invert">B</span>):<table class="simex">
+     <tbody><tr><td class="exhdr">Expression</td>
+         <td class="exhdr">Rule(s) Used</td></tr>
+     <tr><td class="step"><span class="invert">A</span>(A + B) + (B + AA)(A + <span class="invert">B</span>)</td>
+         <td class="just">Original Expression</td></tr><tr><td class="step">
+</td></tr><tr><td class="step"> <span class="invert">A</span>A + <span class="invert">A</span>B + (B + A)A + (B + A)<span class="invert">B</span>
+</td><td class="just"> Idempotent (AA to A), then Distributive, used twice.
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + (B + A)A + (B + A)<span class="invert">B</span>
+</td><td class="just"> Complement, then Identity.
+(Strictly speaking, we also used the Commutative Law for each of these
+applications.)
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + BA + AA + B<span class="invert">B</span> + A<span class="invert">B</span>
+</td><td class="just"> Distributive, two places.
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + BA + A + A<span class="invert">B</span>
+</td><td class="just"> Idempotent (for the A's), then Complement and Identity to remove
+B<span class="invert">B</span>.
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + AB + A<i>T</i> + A<span class="invert">B</span>
+</td><td class="just"> Commutative, Identity; setting up for the next step.
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + A(B + <i>T</i> + <span class="invert">B</span>)
+</td><td class="just"> Distributive.
+</td></tr><tr><td class="step"> <span class="invert">A</span>B + A
+</td><td class="just"> Identity, twice (depending how you count it).
+</td></tr><tr><td class="step"> A + <span class="invert">A</span>B
+</td><td class="just"> Commutative.
+</td></tr><tr><td class="step"> (A + <span class="invert">A</span>)(A + B)
+</td><td class="just"> Distributive.
+</td></tr><tr><td class="step"> A + B
+</td><td class="just"> Complement, Identity.
+</td></tr></tbody></table>
+</li></ul>
+
+
+
+
+</body></html>
