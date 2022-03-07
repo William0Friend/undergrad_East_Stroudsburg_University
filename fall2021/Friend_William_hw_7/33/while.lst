@@ -1,0 +1,32 @@
+     Assembly listing for: while.mas
+                Assembled: Thu Nov 26 22:28:32 EST 2020
+
+         |          ORG 100            
+100 110B |          LOAD One          /Initialize X
+101 110A |  Loop    LOAD X            /Load loop constant
+102 410C |          SUBT Ten          /Compare X to 10
+103 8000 |          SKIPCOND 000      /If AC<0 (X is less than 10), continue loop
+104 9109 |          JUMP Endloop      /If X is not less than 10, terminate loop
+105 110A |          LOAD X            /Begin body of loop
+106 310B |          ADD One           /Add 1 to X
+107 210A |          STORE X           /Store new value in X
+108 9101 |          JUMP Loop         /Continue Loop
+109 7000 |  Endloop HALT              /Terminate program
+10A 0000 |  X       DEC 0             /Storage for X
+10B 0001 |  One     DEC 1             /the constant value 1
+10C 000A |  Ten     DEC 10            /the oop constant
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          Endloop |   109   | 104
+          Loop    |   101   | 108
+          One     |   10B   | 100, 106
+          Ten     |   10C   | 102
+          X       |   10A   | 101, 105, 107
+         ---------------------------------------------------
+
+

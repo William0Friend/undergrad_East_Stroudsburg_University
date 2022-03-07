@@ -1,0 +1,12 @@
+Start, Load A
+Add B
+Store D
+Clear
+Output
+Addi D
+Store B
+Halt
+A, Hex 00FC
+B, Dec 14
+C, Hex 0108
+D, Hex 0000

@@ -1,0 +1,30 @@
+     Assembly listing for: 24.mas
+                Assembled: Fri Nov 27 14:43:10 EST 2020
+
+000 1008 |  Start  LOAD A            
+001 3009 |         ADD B             
+002 200B |         STORE D           
+003 A000 |         CLEAR             
+004 6000 |         OUTPUT            
+005 B00B |         ADDI D            
+006 2009 |         STORE B           
+007 7000 |         HALT              
+008 00FC |  A      HEX 00FC          
+009 000E |  B      DEC 14            
+00A 0108 |  C      HEX 0108          
+00B 0000 |  D      HEX 0000          
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          A      |   008   | 000
+          B      |   009   | 001, 006
+          C      |   00A   | 
+          D      |   00B   | 002, 005
+          Start  |   000   | 
+         --------------------------------------------------
+
+
